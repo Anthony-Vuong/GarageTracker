@@ -1,5 +1,6 @@
 #include "Garage.hpp"
 #include "Vehicle.hpp"
+#include "Truck.hpp"
 #include <memory>
 #include <iostream>
 
@@ -19,9 +20,9 @@ Garage::~Garage(){
     //delete [] vehicles_types;
 }
 
-void Garage::addCars(std::string str){
+void Garage::addVehicles(std::string str){
     std::string delimiter = " ";
-    std::string type{""};
+    std::string type_v{""};
     std::string make{""};
     std::string year{""};
     std::string model{""};
@@ -34,7 +35,7 @@ void Garage::addCars(std::string str){
     while((pos = str.find(delimiter)) != std::string::npos){
         token = str.substr(0, pos);
         if(i == 0){
-            type = token;
+            type_v = token;
         }else if(i == 1){
             year = token;
         }else if(i == 2){
@@ -50,7 +51,12 @@ void Garage::addCars(std::string str){
         str.erase(0, pos + delimiter.length());
     }
     
-    vehicles.push_back(std::make_unique<Vehicle>(type, make, model, year, lic_plt));
+    if(make == "Chevy"){
+        vehicles.push_back(std::make_unique<Truck>(type_v, make, model, year, lic_plt, 0, "", 0, 1.0));
+    }
+    else{
+        vehicles.push_back(std::make_unique<Vehicle>(type_v, make, model, year, lic_plt));
+    }
     
     spaces_taken++;
 

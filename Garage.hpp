@@ -5,6 +5,8 @@
 #include <vector>
 #include "Vehicle.hpp"
 #include <memory>
+
+
 class Garage
 {
     
@@ -18,7 +20,7 @@ private:
 public:
     Garage(int max_parking_spots);
     Garage(const Garage &resource);
-    void addCars(std::string str);
+    void addVehicles(std::string str);
     const int get_num_spaces();
     const int get_spaces_taken();
     const void displayVehicles();

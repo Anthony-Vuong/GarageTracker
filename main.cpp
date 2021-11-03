@@ -10,10 +10,10 @@ int main(int argc, char* argv[])
     
     Garage garage1(100);
     
-    input.open("Cars.txt");
+    input.open("vehicles.txt");
     string str;
     while(getline(input, str)){
-        garage1.addCars(str);
+        garage1.addVehicles(str);
         
     }
     

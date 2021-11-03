@@ -19,8 +19,14 @@ private:
     int vehicle_spaces{1};
     
 public:
+
+    //Empty constructor
+    Vehicle();
+    //Base constructor
     Vehicle(std::string type_, std::string make_, std::string model_, std::string year_, std::string license_plt_);
+    //Copy constructor
     Vehicle(const Vehicle &source);
+    //Destructor
     ~Vehicle();
     
     std::string getVehicleType();
