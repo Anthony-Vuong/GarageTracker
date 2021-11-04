@@ -51,4 +51,3 @@ void Vehicle::set_vehicle_type(){
     
 }
 
-

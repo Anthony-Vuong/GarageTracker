@@ -23,6 +23,7 @@ public:
     void addVehicles(std::string str);
     const int get_num_spaces();
     const int get_spaces_taken();
+    const int get_vehicles_entered();
     const void displayVehicles();
     ~Garage();
 

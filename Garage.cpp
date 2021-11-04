@@ -58,7 +58,7 @@ void Garage::addVehicles(std::string str){
         vehicles.push_back(std::make_unique<Vehicle>(type_v, make, model, year, lic_plt));
     }
     
-    spaces_taken++;
+    vehicles_entered++;
 
 }
 
@@ -78,3 +78,9 @@ const int Garage::get_num_spaces(){
 const int Garage::get_spaces_taken(){
     return spaces_taken;
 }
+
+const int Garage::get_vehicles_entered(){
+    return vehicles_entered;
+}
+
+
