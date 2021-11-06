@@ -24,6 +24,7 @@ public:
     const int get_num_spaces();
     const int get_spaces_taken();
     const int get_vehicles_entered();
+    Vehicle get_vehicle(int i);
     const void displayVehicles();
     ~Garage();
 

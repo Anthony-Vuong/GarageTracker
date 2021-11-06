@@ -83,4 +83,8 @@ const int Garage::get_vehicles_entered(){
     return vehicles_entered;
 }
 
+Vehicle Garage::get_vehicle(int i){
+    return *vehicles.at(i);
+}
+
 
